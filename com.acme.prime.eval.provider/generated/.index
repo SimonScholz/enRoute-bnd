@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository increment="1485593954792" name="com.acme.prime.eval.provider" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.acme.prime.eval.provider"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.0.0.201701280859"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="5fdcc6f53f428fd04e25c7f063c50de9eb5bf0ef9b736d3e770baa6f19292a6e"/>
+      <attribute name="url" value="generated/com.acme.prime.eval.provider.jar"/>
+      <attribute name="size" type="Long" value="7499"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="com.acme.prime.eval.provider"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201701280859"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="com.acme.prime.eval.provider"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201701280859"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.acme.prime.eval.api"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.acme.prime.eval.provider"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201701280859"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.acme.prime.eval.api"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.acme.prime.eval.provider"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201701280859"/>
+    </capability>
+    <capability namespace="bndtools.workspace">
+      <attribute name="bndtools.workspace" value="file:/home/simon/workspace/com.acme.prime"/>
+      <attribute name="project.path" value="/com.acme.prime.eval.provider"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.acme.prime.eval.api)(version&gt;=1.0.0)(!(version&gt;=1.1.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+</repository>

@@ -1,0 +1,41 @@
+#
+#  BUNDLE 
+#
+
+
+Bundle-Version:					1.0.0.${tstamp}
+Bundle-Description: Eval Provider
+
+Private-Package:  \
+	com.acme.prime.eval.provider
+	
+-buildpath: \
+	osgi.enroute.base.api;version=1.0,\
+	com.acme.prime.eval.api;version=latest
+	
+-testpath: \
+	osgi.enroute.junit.wrapper;version=4.12
+
+-includeresource: {readme.md}
+
+
+-runrequires: \
+	osgi.identity;filter:='(osgi.identity=com.acme.prime.eval.provider)',\
+	osgi.identity;filter:='(osgi.identity=osgi.enroute.gogo.shell.provider)'
+	
+-runbundles: \
+	org.apache.felix.gogo.runtime;version='[0.16.2,0.16.3)',\
+	org.apache.felix.log;version='[1.0.1,1.0.2)',\
+	com.acme.prime.eval.provider;version=snapshot,\
+	org.apache.felix.configadmin;version='[1.8.8,1.8.9)',\
+	org.apache.felix.scr;version='[2.0.2,2.0.3)',\
+	org.eclipse.equinox.metatype;version='[1.4.100,1.4.101)',\
+	org.osgi.service.metatype;version='[1.3.0,1.3.1)',\
+	osgi.enroute.gogo.shell.provider;version='[2.0.0,2.0.1)'
+-dsannotations: 
+-runfw: org.eclipse.osgi
+-runee: JavaSE-1.8
+Export-Package: \
+	com.acme.prime.eval.api,\
+	com.acme.prime.eval.api
+Test-Cases: com.acme.prime.eval.provider.EvalImplTest
